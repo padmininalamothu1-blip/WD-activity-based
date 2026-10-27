@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Serenity Wellness</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#f5faf8;
+    color:#333;
+    line-height:1.6;
+}
+
+header{
+    background:linear-gradient(rgba(58,106,90,.8),rgba(58,106,90,.8)),
+    url('https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&fit=crop&w=1400&q=80');
+    background-size:cover;
+    background-position:center;
+    height:90vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    color:white;
+}
+
+.hero-content h1{
+    font-size:3.5rem;
+    margin-bottom:15px;
+}
+
+.hero-content p{
+    font-size:1.2rem;
+    margin-bottom:25px;
+}
+
+.btn{
+    background:#9fd3c7;
+    color:#234;
+    padding:14px 30px;
+    border:none;
+    border-radius:30px;
+    text-decoration:none;
+    font-weight:600;
+    transition:.3s;
+}
+
+.btn:hover{
+    background:white;
+}
+
+nav{
+    position:fixed;
+    width:100%;
+    background:white;
+    padding:15px 8%;
+    box-shadow:0 2px 15px rgba(0,0,0,0.1);
+    z-index:1000;
+}
+
+nav ul{
+    display:flex;
+    justify-content:flex-end;
+    gap:30px;
+    list-style:none;
+}
+
+nav a{
+    text-decoration:none;
+    color:#3a6a5a;
+    font-weight:500;
+}
+
+section{
+    padding:80px 10%;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:50px;
+    color:#3a6a5a;
+    font-size:2.2rem;
+}
+
+.grid{
+    display:grid;
+    gap:25px;
+}
+
+.yoga-grid{
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+}
+
+.card{
+    background:white;
+    border-radius:15px;
+    overflow:hidden;
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+}
+
+.card img{
+    width:100%;
+    height:250px;
+    object-fit:cover;
+}
+
+.card-content{
+    padding:20px;
+}
+
+.card-content h3{
+    margin-bottom:10px;
+    color:#3a6a5a;
+}
+
+.instructors{
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+}
+
+.instructor img{
+    height:300px;
+}
+
+.schedule{
+    width:100%;
+    border-collapse:collapse;
+    background:white;
+    border-radius:15px;
+    overflow:hidden;
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+}
+
+.schedule th{
+    background:#3a6a5a;
+    color:white;
+    padding:15px;
+}
+
+.schedule td{
+    padding:15px;
+    text-align:center;
+    border-bottom:1px solid #ddd;
+}
+
+.plans{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
+
+.plan{
+    background:white;
+    border-radius:15px;
+    padding:30px;
+    text-align:center;
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+}
+
+.price{
+    font-size:2rem;
+    color:#3a6a5a;
+    margin:20px 0;
+}
+
+.plan ul{
+    list-style:none;
+    margin:20px 0;
+}
+
+.plan li{
+    margin:10px 0;
+}
+
+.articles{
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+}
+
+.article img{
+    height:220px;
+}
+
+footer{
+    background:#3a6a5a;
+    color:white;
+    text-align:center;
+    padding:25px;
+}
+
+@media(max-width:768px){
+
+    .hero-content h1{
+        font-size:2.3rem;
+    }
+
+    nav ul{
+        justify-content:center;
+        gap:15px;
+        flex-wrap:wrap;
+    }
+
+    section{
+        padding:60px 5%;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+    <ul>
+        <li><a href="#yoga">Yoga</a></li>
+        <li><a href="#meditation">Meditation</a></li>
+        <li><a href="#instructors">Instructors</a></li>
+        <li><a href="#schedule">Schedule</a></li>
+        <li><a href="#plans">Plans</a></li>
+        <li><a href="#articles">Articles</a></li>
+    </ul>
+</nav>
+
+<header>
+    <div class="hero-content">
+        <h1>Find Your Inner Balance</h1>
+        <p>Yoga, Meditation & Holistic Wellness for a Healthier Life</p>
+        <a href="#plans" class="btn">Join Today</a>
+    </div>
+</header>
+
+<section id="yoga">
+    <h2 class="section-title">Popular Yoga Poses</h2>
+
+    <div class="grid yoga-grid">
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&w=800&q=80">
+            <div class="card-content">
+                <h3>Tree Pose</h3>
+                <p>Improves balance, concentration, and posture.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1510894347713-fc3ed6fdf539?auto=format&fit=crop&w=800&q=80">
+            <div class="card-content">
+                <h3>Warrior Pose</h3>
+                <p>Builds strength, confidence, and endurance.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&fit=crop&w=800&q=80">
+            <div class="card-content">
+                <h3>Lotus Pose</h3>
+                <p>Promotes calmness and deep relaxation.</p>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<section id="meditation">
+    <h2 class="section-title">Meditation Techniques</h2>
+
+    <div class="grid yoga-grid">
+
+        <div class="card">
+            <div class="card-content">
+                <h3>Mindfulness Meditation</h3>
+                <p>Focus awareness on the present moment without judgment.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-content">
+                <h3>Breathing Meditation</h3>
+                <p>Use controlled breathing exercises to reduce stress.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-content">
+                <h3>Loving-Kindness</h3>
+                <p>Cultivate compassion and positive emotions.</p>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<section id="instructors">
+    <h2 class="section-title">Meet Our Instructors</h2>
+
+    <div class="grid instructors">
+
+        <div class="card instructor">
+            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=800&q=80">
+            <div class="card-content">
+                <h3>Sarah Williams</h3>
+                <p>Certified Yoga Trainer with 10+ years experience.</p>
+            </div>
+        </div>
+
+        <div class="card instructor">
+            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=800&q=80">
+            <div class="card-content">
+                <h3>David Johnson</h3>
+                <p>Meditation Coach specializing in mindfulness practices.</p>
+        
