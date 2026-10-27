@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Doctor Appointment Portal</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:#f4f7fc;
+}
+
+header{
+    background:#0d6efd;
+    color:white;
+    padding:15px 40px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+nav ul{
+    list-style:none;
+    display:flex;
+    gap:20px;
+}
+
+nav ul li a{
+    color:white;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+.hero{
+    text-align:center;
+    padding:50px 20px;
+    background:white;
+}
+
+.hero h1{
+    color:#333;
+    margin-bottom:10px;
+}
+
+.hero p{
+    color:#666;
+}
+
+.container{
+    width:90%;
+    margin:auto;
+    padding:30px 0;
+}
+
+.section-title{
+    margin-bottom:20px;
+    color:#333;
+}
+
+.doctors{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:20px;
+}
+
+.card{
+    background:white;
+    border-radius:10px;
+    padding:20px;
+    box-shadow:0 2px 10px rgba(0,0,0,0.1);
+}
+
+.card img{
+    width:100px;
+    height:100px;
+    border-radius:50%;
+    display:block;
+    margin:auto;
+}
+
+.card h3{
+    text-align:center;
+    margin-top:10px;
+}
+
+.specialization{
+    color:#0d6efd;
+    text-align:center;
+    font-weight:bold;
+}
+
+.slots{
+    margin-top:15px;
+}
+
+.slot-btn{
+    background:#d4edda;
+    border:none;
+    padding:8px 12px;
+    margin:5px;
+    border-radius:5px;
+    cursor:pointer;
+}
+
+.form-container{
+    background:white;
+    padding:30px;
+    border-radius:10px;
+    box-shadow:0 2px 10px rgba(0,0,0,0.1);
+}
+
+.form-group{
+    margin-bottom:15px;
+}
+
+label{
+    display:block;
+    margin-bottom:5px;
+    font-weight:bold;
+    color:#444;
+}
+
+input,
+select,
+textarea{
+    width:100%;
+    padding:10px;
+    border:1px solid #ccc;
+    border-radius:5px;
+}
+
+button.submit-btn{
+    background:#0d6efd;
+    color:white;
+    padding:12px 20px;
+    border:none;
+    border-radius:5px;
+    cursor:pointer;
+    font-size:16px;
+}
+
+button.submit-btn:hover{
+    background:#0b5ed7;
+}
+
+footer{
+    text-align:center;
+    background:#0d6efd;
+    color:white;
+    padding:15px;
+    margin-top:30px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h2>HealthCare Connect</h2>
+
+    <nav>
+        <ul>
+            <li><a href="#doctors">Doctors</a></li>
+            <li><a href="#booking">Booking</a></li>
+            <li><a href="#register">Register</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section class="hero">
+    <h1>Doctor Appointment Booking System</h1>
+    <p>Find specialists, view timings, and book appointments easily.</p>
+</section>
+
+<div class="container">
+
+    <section id="doctors">
+        <h2 class="section-title">Doctor Profiles</h2>
+
+        <div class="doctors">
+
+            <div class="card">
+                <img src="https://via.placeholder.com/100" alt="Doctor">
+                <h3>Dr. Priya Sharma</h3>
+                <p class="specialization">Cardiologist</p>
+                <p><strong>Consultation Time:</strong> 9:00 AM - 1:00 PM</p>
+
+                <div class="slots">
+                    <strong>Available Slots:</strong><br>
+                    <button class="slot-btn">09:00 AM</button>
+                    <button class="slot-btn">09:30 AM</button>
+                    <button class="slot-btn">10:00 AM</button>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="https://via.placeholder.com/100" alt="Doctor">
+                <h3>Dr. Rahul Verma</h3>
+                <p class="specialization">Dermatologist</p>
+                <p><strong>Consultation Time:</strong> 2:00 PM - 6:00 PM</p>
+
+                <div class="slots">
+                    <strong>Available Slots:</strong><br>
+                    <button class="slot-btn">02:00 PM</button>
+                    <button class="slot-btn">02:30 PM</button>
+                    <button class="slot-btn">03:00 PM</button>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="https://via.placeholder.com/100" alt="Doctor">
+                <h3>Dr. Anjali Rao</h3>
+                <p class="specialization">Pediatrician</p>
+                <p><strong>Consultation Time:</strong> 10:00 AM - 4:00 PM</p>
+
+                <div class="slots">
+                    <strong>Available Slots:</strong><br>
+                    <button class="slot-btn">10:00 AM</button>
+                    <button class="slot-btn">11:00 AM</button>
+                    <button class="slot-btn">01:00 PM</button>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <br><br>
+
+    <section id="booking" class="form-container">
+        <h2>Appointment Booking</h2>
+
+        <div class="form-group">
+            <label for="doctor">Select Doctor</label>
+            <select id="doctor">
+                <option>Select Doctor</option>
+                <option>Dr. Priya Sharma</option>
+                <option>Dr. Rahul Verma</option>
+                <option>Dr. Anjali Rao</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="slot">Select Appointment Slot</label>
+            <select id="slot">
+                <option>Select Slot</option>
+                <option>09:00 AM</option>
+                <option>09:30 AM</option>
+                <option>10:00 AM</option>
+            </select>
+        </div>
+    </section>
+
+    <br><br>
+
+    <section id="register" class="form-container">
+        <h2>Patient Registration</h2>
+
+        <form>
+
+            <div class="form-group">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" placeholder="Enter full name">
+            </div>
+
+            <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" placeholder="Enter phone number">
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" placeholder="Enter email address">
+            </div>
+
+            <div class="form-group">
+                <label for="dob">Date of Birth</label>
+                <input type="date" id="dob">
+            </div>
+
+            <div class="form-group">
+                <label for="notes">Medical Notes</label>
+                <textarea id="notes" rows="4" placeholder="Enter medical history or symptoms"></textarea>
+            </div>
+
+            <button type="submit" class="submit-btn">
+                Register & Book Appointment
+            </button>
+
+        </form>
+    </section>
+
+</div>
+
+<footer>
+    © 2026 HealthCare Connect | All Rights Reserved
+</footer>
+
+</body>
+</html>
